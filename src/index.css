@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #FFF8EF;
+    color: #45304F;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  /* Custom cute scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FFF8EF;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FFBFA3;
+    border-radius: 9999px;
+    border: 2px solid #FFF8EF;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF758F;
+  }
+}
+
+/* Custom whimsical styles */
+.text-stroke-sm {
+  -webkit-text-stroke: 1px rgba(69, 48, 79, 0.15);
+}
+
+.text-shadow-soft {
+  text-shadow: 2px 3px 0px rgba(69, 48, 79, 0.08);
+}
+
+.paper-texture {
+  background-image: radial-gradient(rgba(69, 48, 79, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.storybook-card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.storybook-card:hover {
+  transform: translateY(-6px) rotate(-0.5deg);
+}
+
+/* Subtle glowing pulse */
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(255, 117, 143, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 28px rgba(255, 232, 154, 0.7));
+  }
+}
+
+.glow-party {
+  animation: glow-pulse 3s infinite ease-in-out;
+}
